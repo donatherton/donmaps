@@ -16,6 +16,7 @@ import math
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_gtk3agg import (
     FigureCanvasGTK3Agg as FigureCanvas)
+import os
 #from matplotlib.figure import Figure
 
 # CSS
@@ -31,7 +32,7 @@ Gtk.StyleContext.add_provider_for_screen(screen, provider, Gtk.STYLE_PROVIDER_PR
 class UI(Gtk.Window):
 	def __init__(self):
 	
-		self.path = '/home/don/donmaps'
+		self.path = os.path.dirname(__file__)
 #		print(self.path)
 		
 		Gtk.Window.__init__(self, type=Gtk.WindowType.TOPLEVEL)
