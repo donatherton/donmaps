@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+ORSauth = 'Put your ORS key here'
 import gi
 gi.require_version("Gtk", "3.0")
 gi.require_version('OsmGpsMap', '1.0')
@@ -184,7 +185,7 @@ class UI(Gtk.Window):
 			body = {"format_in":"polyline","format_out":"polyline","geometry":wpts}
 			headers = {
 	    'Accept': 'application/json, application/geo+json, application/gpx+xml, img/png; charset=utf-8',
-	    'Authorization': '5b3ce3597851110001cf624831f2d1f9129542dfbd9a148cd579f14b',
+	    'Authorization': ORSauth,
 	    'Content-Type': 'application/json; charset=utf-8'
 			}
 			call = requests.post('https://api.openrouteservice.org/elevation/line', json=body, headers=headers,timeout=10)
