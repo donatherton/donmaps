@@ -38,7 +38,7 @@ class UI(Gtk.Window):
 		
 		Gtk.Window.__init__(self, type=Gtk.WindowType.TOPLEVEL)
 
-		self.set_default_size(1366, 725)
+		self.maximize()
 		self.set_title('OpenStreetMap GPS Mapper')
 
 		self.vbox = Gtk.HBox()
